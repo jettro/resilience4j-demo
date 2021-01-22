@@ -39,7 +39,7 @@ public class DummyEndpoint {
         }
         LOGGER.info("Call at {}: '{}'", timestamp.toString(), message);
 
-        WebResource webResource = this.webResource.path("/dummy");
+        WebResource webResource = this.webResource.path("/dummy/");
         if (message.equalsIgnoreCase("error")) {
             webResource = webResource.path("/error");
         } else if (message.equalsIgnoreCase("slow")) {
